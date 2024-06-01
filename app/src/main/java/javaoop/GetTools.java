@@ -97,6 +97,7 @@ public class GetTools {
                 myWriter.write(dtf.format(now) + " \nGet tools Request::: ");
                 myWriter.write(" " + request.bodyPublisher() + "\n");
                 myWriter.write(dtf.format(now) + " \nGet Tools Response ::: ");
+                myWriter.write(response.statusCode() + " ");
                 myWriter.write(response.body() + "\n");
                 myWriter.close();
                 System.out.println("Successfully wrote to the file.");

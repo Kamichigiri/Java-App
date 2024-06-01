@@ -39,7 +39,7 @@ public class WrapperService {
     }
 
     public static void getToolsById(int ID ){
-        sendRequest("https://simple-tool-rental-api.glitch.me/tools/:" + ID, "GET", "Get Tools By Id", null);
+        sendRequest("https://simple-tool-rental-api.glitch.me/tools/:" + ID, "GET", "Tools By Id", null);
 //        Tools tool = new Tools();
         Gson gson = new Gson();
         try {
@@ -71,8 +71,8 @@ public class WrapperService {
         try {
             HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
             jsonResponse = response.body();
-            logToFile(method + requestName + " Request::: ", request.bodyPublisher().toString());
-            logToFile(method + " Response::: ", response.statusCode() + " " + response.body());
+            logToFile(method + " " + requestName + " Request::: ", request.bodyPublisher().toString());
+            logToFile(method + " " + requestName + " Response::: ", response.statusCode() + " " + response.body());
         } catch (IOException | InterruptedException | UnresolvedAddressException e) {
             e.printStackTrace();
         }
