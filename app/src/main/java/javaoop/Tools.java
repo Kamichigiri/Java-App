@@ -4,7 +4,8 @@ public class Tools {
     private String category;
     private String name;
     private String inStock;
-    
+    private String ID;
+
     public String getInStock() {
         return inStock;
     }
